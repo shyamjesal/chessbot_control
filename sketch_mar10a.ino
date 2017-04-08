@@ -105,8 +105,8 @@ void setup() {
   //pinMode(sleep,OUTPUT);
   digitalWrite(x_interrupt, LOW);  
   digitalWrite(y_interrupt, LOW);
-  //attachInterrupt(digitalPinToInterrupt(3), resetx , RISING);
-  //attachInterrupt(digitalPinToInterrupt(2), resety , RISING);
+  attachInterrupt(digitalPinToInterrupt(3), resetx , RISING);
+  attachInterrupt(digitalPinToInterrupt(2), resety , RISING);
   Serial.begin(300);
   myservo.attach(servopin);  myservo.write(0);
   //resetx();
